@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(:version => 20130527090234) do
     t.string   "price"
     t.string   "manufacturer"
     t.string   "serial_numbers"
-    t.string   "type"
+    t.string   "asset_type"
     t.string   "refer_tickets"
     t.string   "refer_projects"
     t.string   "refer_locations"
@@ -182,25 +182,6 @@ ActiveRecord::Schema.define(:version => 20130527090234) do
     t.string   "commission_service"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
-  end
-
-  create_table "knowledgebases", :force => true do |t|
-    t.string   "topic"
-    t.string   "product"
-    t.string   "software"
-    t.text     "description"
-    t.string   "videos"
-    t.string   "screen_shots"
-    t.string   "related_tickets"
-    t.string   "companies"
-    t.string   "author"
-    t.string   "edits"
-    t.string   "related_articles"
-    t.text     "notes"
-    t.string   "related_devices"
-    t.string   "date_created"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
   end
 
   create_table "knowledges", :force => true do |t|
