@@ -58,7 +58,13 @@ $(document).ready(function() {
                 <small><%= user.title %></small>
                 <p class="grid-name"><%= user.firstName %>&nbsp;<%= user.lastName %></p>
                 <p class="grid-details">Age: <b><%= user.phone %></b><br>
-                Gender: <b><%= user.email_private %></b><br>
+                Gender: <b>
+                	<% if (user.email_private) %>
+                		Female
+                	<% else %>
+                		Male
+                	<% end %>
+                	</b><br>
                 Country: <b><%= user.site_city %></b></p>
               </div>
               <ul class="grid-actions">
